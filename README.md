@@ -2,6 +2,12 @@
 
 See <https://censorship.no/>.
 
+A CENO client has three main roles:
+
+ 1. Allowing a user to retrieve potentially censored content from injectors or other users.
+ 2. Sharing retrieved content with other users (seeding).
+ 3. Allowing other users to reach injectors (bridging).
+
 ## Building (developers only)
 
 Build for the latest version of Ouinet with:
