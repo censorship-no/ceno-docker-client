@@ -47,3 +47,16 @@ A bridge client is nothing but a normal client (that can be run by anyone) which
 Please note that many mobile connections (and some domestic ones) use CGNAT which makes the client unreachable from the outside, thus making them unfit for bridges.
 
 Also note that if you run the client on a non-GNU/Linux system, you will need to manually setup a redirection to UDP port 28729 of the device running the client.
+
+## Testing the client with a browser
+
+**Warning:** Browsing via a CENO client on a computer is only supported for testing. Please use the CENO Browser for a better experience on Android.
+
+  1. Clone the CENO Web Extension repo: `git clone https://github.com/censorship-no/ceno-ext-settings.git`
+  2. Create a test profile for Firefox: `mkdir ceno-test`
+  3. Run Firefox with the test profile: `firefox --no-remote --profile ceno-test`
+  4. Make sure that `localhost` port `8077` is Firefox's HTTP proxy for all protocols: <https://www.wikihow.com/Enter-Proxy-Settings-in-Firefox>
+  5. Go to <http://localhost:8078/> and install the client-specific CA certificate linked in there to identify web sites.
+  6. Enable the CENO Extension: in Firefox's *Add-ons* window, click on the gears icon, then *Debug Add-ons*, then *Load Temporary Add-on…* and choose the *manifest.json* file under the `ceno-ext-settings` directory.
+
+Then browse freely. In subsequent runs you will only need to follow steps 3 and 6.
