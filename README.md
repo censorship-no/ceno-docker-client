@@ -36,3 +36,14 @@ Subsequently, start/stop the client manually with:
 
     $ sudo docker start ceno-client
     $ sudo docker stop ceno-client
+
+## Using the client as a bridge
+
+A bridge client is nothing but a normal client (that can be run by anyone) which happens to:
+
+  - Be able to reach injectors. This means that the ISP used by the device running the client is not blocking access to those particular Internet hosts.
+  - Be reachable to other clients. As the device where the client runs may not have a public IP address, but its router may, the client tries to use UPnP to automatically set up the appropriate port redirections at the router; otherwise manual redirections can be set up by a user with admin access to the router.
+
+Please note that many mobile connections (and some domestic ones) use CGNAT which makes the client unreachable from the outside, thus making them unfit for bridges.
+
+Also note that if you run the client on a non-GNU/Linux system, you will need to manually setup a redirection to UDP port 28729 of the device running the client.
