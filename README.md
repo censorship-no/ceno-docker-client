@@ -14,11 +14,13 @@ Build for Ouinet version `vX.Y.Z` as `latest` with:
 
 ## Running the client
 
-Run the client for the first time with:
+On a GNU/Linux system, run the client for the first time with:
 
     $ sudo docker run --name ceno-client -dv ceno:/var/opt/ouinet --network host --restart unless-stopped equalitie/ceno-client
 
 This will start the client automatically along with the system.
+
+If your system is not GNU/Linux (e.g. Windows, macOS), you will need to setup some port redirections as the client can not have direct access to the host's network stack. Replace `--network host` with `-p 127.0.0.1:8077-8078:8077-8078 -p 8079:8079/udp` in the previous command line.
 
 Watch the client's output with:
 
