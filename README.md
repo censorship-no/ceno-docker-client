@@ -2,6 +2,8 @@
 
 See <https://censorship.no/>.
 
+## Building (developers only)
+
 Build for the latest version of Ouinet with:
 
     $ docker build -t equalitie/ceno-client .
@@ -9,6 +11,8 @@ Build for the latest version of Ouinet with:
 Build for Ouinet version `vX.Y.Z` as `latest` with:
 
     $ docker build --build-arg OUINET_VERSION=vX.Y.Z -t equalitie/ceno-client:vX.Y.Z -t equalitie/ceno-client:latest .
+
+## Running the client
 
 Run with:
 
