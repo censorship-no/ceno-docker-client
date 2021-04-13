@@ -14,15 +14,17 @@ Build for Ouinet version `vX.Y.Z` as `latest` with:
 
 ## Running the client
 
-Run with:
+Run the client for the first time with:
 
     $ sudo docker run --name ceno-client -dv ceno:/var/opt/ouinet --network host --restart unless-stopped equalitie/ceno-client
 
-Watch logs with:
+This will start the client automatically along with the system.
+
+Watch the client's output with:
 
     $ sudo docker logs -ft ceno-client
 
-Start/stop manually with:
+Subsequently, start/stop the client manually with:
 
     $ sudo docker start ceno-client
     $ sudo docker stop ceno-client
