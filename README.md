@@ -59,4 +59,9 @@ Also note that if you run the client on a non-GNU/Linux system, you will need to
   5. Go to <http://localhost:8078/> and install the client-specific CA certificate linked in there to identify web sites.
   6. Enable the CENO Extension: in Firefox's *Add-ons* window, click on the gears icon, then *Debug Add-ons*, then *Load Temporary Add-on…* and choose the *manifest.json* file under the `ceno-ext-settings` directory.
 
-Then browse freely. In subsequent runs you will only need to follow steps 3 and 6.
+In subsequent test browser runs you will only need to follow steps 3 and 6.
+
+Browse freely or check the [CENO User Manual][ceno-man-test] for some testing instructions.
+
+[ceno-man-test]: https://censorship.no/user-manual/en/browser/testing.html
+    "CENO User Manual - Testing the Browser"
