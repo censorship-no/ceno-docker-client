@@ -37,6 +37,18 @@ Subsequently, start/stop the client manually with:
     $ sudo docker start ceno-client
     $ sudo docker stop ceno-client
 
+## Upgrading the client
+
+You first need to get the latest version of the client, and then remove the existing one:
+
+    $ sudo docker pull equalitie/ceno-client
+    $ sudo docker stop ceno-client
+    $ sudo docker rm ceno-client
+
+There is no danger of losing existing client data, as it is kept in its own volume.
+
+Finally, run the client again with `docker run` as indicated in the previous section.
+
 ## Using the client as a bridge
 
 A bridge client is nothing but a normal client (that can be run by anyone) which happens to:
