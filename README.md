@@ -60,6 +60,14 @@ Please note that many mobile connections (and some domestic ones) use CGNAT whic
 
 Also note that if you run the client on a non-GNU/Linux system, you will need to manually setup a redirection to UDP port 28729 of the device running the client.
 
+## Publishing a static cache
+
+If your computer stores a Ouinet static cache root directory `/path/to/my-static-cache` (containing a `.ouinet` hidden directory and maybe other data files), with content signed by CENO injectors, you can configure your client to seed it. When executing `docker run`, add the following arguments right before `equalitie/ceno-client`:
+
+    -v /path/to/my-static-cache:/var/opt/ouinet/client/static-cache:ro
+
+Your client will start seeding as soon as it starts. Please note that you need to stop and remove the `ceno-client` container if it already exists.
+
 ## Testing the client with a browser
 
 **Warning:** Browsing via a CENO client on a computer is only supported for testing. Please use the CENO Browser for a better experience on Android.
