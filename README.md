@@ -37,6 +37,8 @@ Subsequently, start/stop the client manually with:
     $ sudo docker start ceno-client
     $ sudo docker stop ceno-client
 
+### Debug logging
+
 By default, debug messages from the client are off. If you want to turn them on temporarily (until the client is stopped), go to <http://localhost:8078/> and change "Log level" in there. To enable debugging permanently, run:
 
     $ sudo docker exec ceno-client sed -i 's/^#log-level /log-level /' /var/opt/ouinet/client/ouinet-client.conf
