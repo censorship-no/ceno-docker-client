@@ -26,7 +26,7 @@ On a GNU/Linux system, run the client for the first time with:
 
 This will start the client automatically along with the system.
 
-If your system is not GNU/Linux (e.g. Windows, macOS), you will need to setup some port redirections as the client can not have direct access to the host's network stack. Replace `--network host` with `-p 127.0.0.1:8077-8078:8077-8078 -p 28729:28729/udp` in the previous command line.
+**Note:** If your system is not GNU/Linux (e.g. Windows, macOS), you will need to setup some port redirections as the client can not have direct access to the host's network stack. Replace `--network host` with `-p 127.0.0.1:8077-8078:8077-8078 -p 28729:28729/udp` in the previous command line.
 
 Watch the client's output with:
 
@@ -64,7 +64,7 @@ A bridge client is nothing but a normal client (that can be run by anyone) which
 
 Please note that many mobile connections (and some domestic ones) use CGNAT which makes the client unreachable from the outside, thus making them unfit for bridges.
 
-Also note that if you run the client on a non-GNU/Linux system, you will need to manually setup a redirection to UDP port 28729 of the device running the client.
+**Note:** If your system is not GNU/Linux (e.g. Windows, macOS), you will need to manually setup a redirection to UDP port 28729 of the device running the client.
 
 ## Publishing a static cache
 
