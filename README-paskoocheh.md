@@ -1,6 +1,6 @@
 # Instructions to deploy a pre-configured Paskoocheh Docker client
 
-See the [README](./README.md) for more details on the operation of this setup.
+See the [README](./README.md) for more details on the operation of this setup (just replace `ceno-client` with `paskoocheh-client`).
 
 This assumes that a static cache exists at `/path/to/static-cache`. If not, create an empty one:
 
