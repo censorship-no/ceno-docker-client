@@ -45,6 +45,19 @@ By default, debug messages from the client are off. If you want to turn them on 
 
 And restart the client.
 
+### Avoiding client download issues
+
+If the `docker run` command above fails while *pulling* because `docker.io` servers are unreachable or they forbid you from downloading from them, here is one workaround. In a system which has access to the `docker.io` servers, run:
+
+    $ sudo docker pull equalitie/ceno-client
+    $ sudo docker image save equalitie/ceno-client | gzip > ceno-client.tgz
+
+Then transfer `ceno-client.tgz` to your system and run:
+
+    $ gzip -dc ceno-client.tgz | sudo docker load
+
+Then you can try the `docker run` command again.
+
 ## Upgrading the client
 
 You first need to get the latest version of the client, and then remove the existing one:
