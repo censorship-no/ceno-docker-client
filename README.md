@@ -50,7 +50,7 @@ And restart the client.
 If the `docker run` command above fails while *pulling* because `docker.io` servers are unreachable or they forbid you from downloading from them, here is one workaround. In a system which has access to the `docker.io` servers, run:
 
     $ sudo docker pull equalitie/ceno-client
-    $ sudo docker image save equalitie/ceno-client | gzip > ceno-client.tgz
+    $ sudo docker image save equalitie/ceno-client:latest | gzip > ceno-client.tgz
 
 Then transfer `ceno-client.tgz` to your system and run:
 
