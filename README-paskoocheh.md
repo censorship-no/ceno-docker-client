@@ -13,9 +13,10 @@ $ mkdir -p /path/to/static-cache/.ouinet
 ## If you want to use the name "Paskoocheh"
 
 ```
+$ cd /path/to/static-cache/..
 $ sudo docker run --name paskoocheh-client -dv paskoocheh:/var/opt/ouinet \
   --network host --restart unless-stopped \
-  -v /path/to/static-cache:/var/opt/ouinet-static-cache:ro \
+  -v $PWD/static-cache:/var/opt/ouinet-static-cache:ro \
   equalitie/paskoocheh-client
 ```
 
@@ -41,9 +42,10 @@ Run:
 ```
 $ cd $NAME-client
 $ sudo docker build -t $NAME-client .  # mind the final dot
+$ cd /path/to/static-cache/..
 $ sudo docker run --name $NAME-client -dv $NAME:/var/opt/ouinet \
   --network host --restart unless-stopped \
-  -v /path/to/static-cache:/var/opt/ouinet-static-cache:ro \
+  -v $PWD/static-cache:/var/opt/ouinet-static-cache:ro \
   $NAME-client
 ```
 
