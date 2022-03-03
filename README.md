@@ -96,13 +96,16 @@ Your client will start seeding as soon as it starts. Please note that you need t
   1. Clone the CENO Web Extension repo: `git clone https://github.com/censorship-no/ceno-ext-settings.git`
   2. Create a test profile for Firefox: `mkdir ceno-test`
   3. Run Firefox with the test profile: `firefox --no-remote --profile ceno-test`
-  4. Make sure that `localhost` port `8077` is Firefox's HTTP proxy for all protocols: <https://www.wikihow.com/Enter-Proxy-Settings-in-Firefox>
-  5. Go to <http://localhost:8078/> and install the client-specific CA certificate linked in there to identify web sites.
-  6. Enable the CENO Extension: in Firefox's *Add-ons* window, click on the gears icon, then *Debug Add-ons*, then *Load Temporary Add-on…* and choose the *manifest.json* file under the `ceno-ext-settings` directory.
+  4. Go to <http://localhost:8078/> and install the client-specific CA certificate linked in there to identify web sites.
+  5. Enable the CENO Extension: in Firefox's *Add-ons* window, click on the gears icon, then *Debug Add-ons*, then *Load Temporary Add-on…* and choose the *manifest.json* file under the `ceno-ext-settings` directory.
+  6. Since CENO Browser v1.3.0 and newer uses HTTPS for all pages, enable *HTTPS-Only Mode* in Firefox's *Settings* window, under *Privacy & Security*. For older browsers lacking that option, install the [HTTPS by default][] extension instead.
 
-In subsequent test browser runs you will only need to follow steps 3 and 6.
+**Note:** If you have an old CENO Extension (less than v1.4.0, click on *Manifest URL* to check its `version` close to the beginning), you also need to set `localhost` port `8077` as Firefox's proxy for protocols HTTP and HTTPS/SSL: <https://www.wikihow.com/Enter-Proxy-Settings-in-Firefox>
+
+In subsequent test browser runs you will only need to follow steps 3 and 5.
 
 Browse freely or check the [CENO User Manual][ceno-man-test] for some testing instructions.
 
+[HTTPS by default]: https://addons.mozilla.org/ca/firefox/addon/https-by-default/
 [ceno-man-test]: https://censorship.no/user-manual/en/browser/testing.html
     "CENO User Manual - Testing the Browser"
